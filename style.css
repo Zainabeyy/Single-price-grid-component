@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(203, 44%, 93%);
+  font-family: "Karla", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin: 30px;
+  max-width: 846px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 0px 18px #0000002c;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 232px 345px;
+  grid-template-areas:
+    "sec sec"
+    "sect1 sect2";
+}
+.join {
+  grid-area: sec;
+  padding: 48px 54px;
+}
+.join h1 {
+  color: hsl(179, 62%, 43%);
+}
+.join h2 {
+  color: hsl(71, 73%, 54%);
+  font-size: 1.1rem;
+  margin: 28px 0px 12px;
+}
+.join p {
+  color: hsl(218, 22%, 67%);
+}
+.monthly {
+  grid-area: sect1;
+  color: hsl(204, 43%, 93%);
+  background-color: hsl(179, 62%, 43%);
+  padding: 48px 54px;
+}
+.monthly .price {
+  margin: 28px 0px 12px;
+}
+.price span {
+  font-size: 2rem;
+  font-weight: 700;
+  vertical-align: middle;
+  color: hsl(203, 44%, 93%);
+}
+.price p {
+  color: hsl(181, 66%, 70%);
+  display: inline;
+  padding: 0px 12px;
+}
+.why {
+  grid-area: sect2;
+  padding: 48px 54px;
+  color: hsl(203, 44%, 93%);
+  background-color: hsl(179, 47%, 52%);
+}
+.why p {
+  margin: 28px 0px 19px;
+}
+p {
+  line-height: 1.5rem;
+}
+.monthly button {
+  padding: 14px 80px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+  border-radius: 6px;
+  margin: 48px 0px;
+  box-shadow: 0px 0px 12px #0000002c;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 270px 262px 267px;
+    grid-template-areas: "sec" "sect1" "sect2";
+  }
+  .join {
+    grid-area: sec;
+    padding: 24px 26px;
+  }
+  .join h1 {
+    font-size: 1.2rem;
+  }
+  .monthly {
+    grid-area: sect1;
+    padding: 24px 26px;
+  }
+  .monthly button {
+    margin: 24px 0px;
+    padding: 14px 90px;
+  }
+  .why {
+    grid-area: sect2;
+    padding: 24px 26px;
+  }
+}
